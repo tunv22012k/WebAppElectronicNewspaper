@@ -8,13 +8,14 @@ using Magazine.Areas.Admin.ViewModels;
 
 namespace Magazine.Areas.Admin.Controllers
 {
+    [Authorize]
     public class ArticleController : Controller
     {
         private readonly MagazineDbContext db = new MagazineDbContext();
         // Hiển thị danh sách bài viết chờ phê duyệt
         public ActionResult Index()
         {
-            var pendingArticles = db.Articles.Where(a => a.ApprovalStatus == "Chưa xử lý").ToList();
+            var pendingArticles = db.Articles.ToList();
 
             return View(pendingArticles);
         }

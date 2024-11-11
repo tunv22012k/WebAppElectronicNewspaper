@@ -5,6 +5,13 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+<style>
+    .style_input {
+        border-radius: 5px;
+        width: 250px;
+    }
+</style>
+
 <h2>Thêm người dùng mới</h2>
 
 @using (Html.BeginForm())
@@ -12,28 +19,44 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="form-group mt-2">
+                Tên đầy đủ:
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Username)
+                    @Html.EditorFor(model => model.Fullname, new { htmlAttributes = new { @class = "style_input" } })
+                    @Html.ValidationMessageFor(model => model.Fullname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-2">
+                Tên sử dụng:
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "style_input" } })
                     @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
                 </div>
             </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.PasswordHash, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="form-group mt-2">
+                Mật khẩu:
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.PasswordHash)
+                    @Html.EditorFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "style_input" } })
                     @Html.ValidationMessageFor(model => model.PasswordHash, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-2">
+                Email:
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "style_input" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
             <p></p>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <button type="submit" class="btn btn-info">Thêm</button>
+                    <button type="submit" class="btn btn-info">Thêm</button> | @Html.ActionLink("Trở về", "Index", "", new { @class = "btn btn-outline-dark" })
                 </div>
             </div>
         </div>

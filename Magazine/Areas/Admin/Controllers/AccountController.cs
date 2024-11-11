@@ -7,6 +7,7 @@ using Magazine.Areas.Admin.ViewModels;
 using Magazine.Models;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.Security;
 
 namespace Magazine.Areas.Admin.Controllers
 {
@@ -20,7 +21,7 @@ namespace Magazine.Areas.Admin.Controllers
             List<Account> accounts = db.Accounts.ToList();
             return View();
         }
-      
+        
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
@@ -34,6 +35,26 @@ namespace Magazine.Areas.Admin.Controllers
 
                 if (account != null)
                 {
+                    // Tạo ticket FormsAuthentication với vai trò người dùng
+                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
+                        1,                                      // Version
+                        account.Username,                       // User name
+                        DateTime.Now,                           // Issue date
+                        DateTime.Now.AddMinutes(30),            // Expiration
+                        false,                                  // Persistent
+                        $"Admin|{account.Username}"             // User's
+                    );
+
+                    // Mã hóa ticket
+                    string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+
+                    // Tạo cookie
+                    HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                    Response.Cookies.Add(authCookie);
+
+                    // set info user login
+                    Session["UserLogin"] = account;
+
                     return RedirectToAction("Index", "HomeAdmin");
                 }
 
@@ -52,7 +73,8 @@ namespace Magazine.Areas.Admin.Controllers
         }
         public ActionResult Logout()
         {
-            Session.Clear();
+            FormsAuthentication.SignOut();
+            Session.Clear(); // Xóa tất cả dữ liệu session
             return RedirectToAction("Login");
         }
     }

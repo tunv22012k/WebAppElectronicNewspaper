@@ -17,7 +17,7 @@ namespace Magazine.Models
         public Account Account { get; set; }
 
         [Required(ErrorMessage = "Tên đăng nhập không được để trống!")]
-        [MaxLength]
+        [MaxLength(256)]
         public string Username { get; set; }
 
         [Required(ErrorMessage = "Mật khẩu không được để trống!")]
@@ -28,7 +28,7 @@ namespace Magazine.Models
         [MaxLength(256)]
         public string Email { get; set; }
 
-        [MaxLength]
+        [MaxLength(256)]
         public string Fullname { get; set; }
 
         public string Avatar { get; set; }

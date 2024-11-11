@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Magazine.Areas.Admin.Controllers
 {
+    [Authorize]
     public class HomeAdminController : Controller
     {
         // GET: Admin/HomeAdmin

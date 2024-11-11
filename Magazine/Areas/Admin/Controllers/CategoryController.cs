@@ -7,6 +7,7 @@ using Magazine.Models;
 
 namespace Magazine.Areas.Admin.Controllers
 {
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly MagazineDbContext db = new MagazineDbContext();
