@@ -1,0 +1,73 @@
+﻿.create-item .btn.btn-default.btn-create {
+    border: 2px solid #7f5feb;
+    background: #7f5feb;
+    color: #dfdeee;
+    border-radius: 100px;
+    width: 140px;
+    height: 39px;
+    font-size: 17px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-default {
+    border: 2px solid #7f5feb !important;
+}
+
+.create-item .btn.btn-default.btn-create:hover{
+    border-color: white; 
+    background: #7f5feb;
+    color: white;
+    cursor: pointer;
+}
+
+
+.link-create a {
+    color: green;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.link-create a:hover{
+    color: #f26460;
+}
+
+#txt-images {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6e707e;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d3e2;
+    border-radius: .35rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#btnSeletImage{
+    margin-top:5px;
+}
+
+
+.logo-txt {
+    font-size: 1.4rem;
+    font-family: 'Lobster', cursive;
+    text-transform: none;
+    letter-spacing: 3px;
+
+}
+
+.sbb:hover{
+    color: #f26460 ;
+    cursor: pointer;
+}
+
+
+.validation-summary-errors.text-danger ul {
+    list-style: none;
+    padding-left: 12px;
+}

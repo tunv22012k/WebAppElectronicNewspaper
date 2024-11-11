@@ -1,0 +1,21 @@
+﻿@model Magazine.Models.SubCategory
+
+@{ 
+    ViewBag.Title = "Thêm chuyên mục con";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml"; 
+}
+
+<h2>Thêm chuyên mục con</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="SubCategoryName">Tên chuyên mục con</label>
+        @Html.EditorFor(model => model.SubCategoryName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.SubCategoryName, "", new { @class = "text-danger" })
+    </div>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+    @Html.ActionLink("Quay lại", "Index", "Category", new { area = "Admin" }, new { @class = "btn btn-secondary" })
+}

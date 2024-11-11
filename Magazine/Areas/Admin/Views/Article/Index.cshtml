@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Magazine.Models.Article>
+
+@{
+    ViewBag.Title = "Quản lý Bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Danh sách bài viết chờ phê duyệt</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tiêu đề</th>
+            <th>Ngày đăng</th>
+            <th>Tác giả</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+                <td>@article.Title</td>
+                <td>@article.PostTime.ToString("dd/MM/yyyy")</td>
+                <td>@article.User</td>
+                <td>
+                    <form asp-action="Approve" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@article.ArticleID" />
+                        <button type="submit" class="btn btn-success">Phê duyệt</button>
+                    </form>
+                    <form asp-action="Reject" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@article.ArticleID" />
+                        <input type="text" name="feedback" placeholder="Lý do từ chối" required />
+                        <button type="submit" class="btn btn-danger">Từ chối</button>
+                    </form>
+                    <form asp-action="RequestEdit" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@article.ArticleID" />
+                        <input type="text" name="feedback" placeholder="Yêu cầu chỉnh sửa" required />
+                        <button type="submit" class="btn btn-warning">Yêu cầu chỉnh sửa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

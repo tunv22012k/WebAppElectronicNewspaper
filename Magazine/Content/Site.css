@@ -1,0 +1,105 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+/* Navigation */
+nav {
+    background-color: #444;
+    overflow: hidden;
+}
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+         color: #fff;
+         text-decoration: none;
+         padding: 10px 20px;
+         display: inline-block;
+    }
+
+    nav ul li a:hover {
+          background-color: #555;
+          border-radius: 5px;
+    }
+
+/* Main Content */
+main {
+    padding: 20px;
+    min-height: 650px;
+    margin-top: 20px;
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    form label {
+        font-weight: bold;
+    }
+
+    form .form-control {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #444;
+    }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

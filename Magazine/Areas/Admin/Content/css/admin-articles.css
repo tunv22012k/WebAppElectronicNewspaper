@@ -1,0 +1,16 @@
+﻿body {
+
+}
+
+.admin-artcles tbody tr td > div {
+    word-wrap: break-word;
+    max-height: 104px;
+    line-height: 26px;
+
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,50 @@
+$primary-color: #f26480;
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}

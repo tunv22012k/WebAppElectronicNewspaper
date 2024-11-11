@@ -1,0 +1,186 @@
+.top-bar__content {
+  width: 162.5rem !important;
+}
+.top-bar__content .top-bar__menu {
+  margin-left: 12rem;
+}
+
+.shop-grid-3col__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.sg3-main-content {
+  width: 162.5rem;
+}
+
+.products__list {
+  margin-top: -10px;
+}
+
+.eliah-product {
+  margin-top: 3rem;
+  width: 38.5rem !important;
+}
+.eliah-product .eliah-pro__img {
+  height: 48.5rem !important;
+}
+.eliah-product .eliah-pro__quick-choice {
+  padding: 0 10rem 0 10rem !important;
+}
+
+.sg3-top-choices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.sg3-top-choices > div:first-child {
+  display: flex;
+}
+.sg3-top-choices > div:first-child i:hover {
+  color: #f26460;
+}
+.sg3-top-choices > div:first-child i:last-of-type {
+  margin-left: 1rem;
+}
+.sg3-top-choices > div:first-child span {
+  margin-left: 3rem;
+}
+.sg3-top-choices > div:last-child {
+  width: 20rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  height: 5rem;
+  background-color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sg3-top-choices select {
+  background-color: #e1e1e1;
+  border: none;
+  outline: none;
+}
+
+.page-nnum {
+  display: flex;
+  margin: 3rem auto 0 auto;
+  width: fit-content;
+}
+.page-nnum > div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+}
+.page-nnum > div:first-child {
+  color: white;
+  background-color: black;
+}
+.page-nnum > div:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.bottom-list-img {
+  overflow: hidden;
+}
+
+@media (max-width: 1665px) {
+  .sg3-main-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 1599px) {
+  .eliah-product {
+    margin-left: 0.5rem;
+    width: 24% !important;
+  }
+  .products__list {
+    margin-left: -5px;
+  }
+}
+@media (max-width: 1400px) {
+  .eliah-product {
+    width: 24% !important;
+    min-width: 28rem !important;
+  }
+  .eliah-product .eliah-pro__img {
+    height: 39rem !important;
+  }
+}
+@media (max-width: 1215px) {
+  .eliah-product {
+    margin-left: 0.5rem;
+    width: 32% !important;
+    min-width: 28rem !important;
+  }
+  .eliah-product .eliah-pro__img {
+    height: 43rem !important;
+  }
+
+  .products__list {
+    margin-left: -5px;
+  }
+}
+@media (max-width: 1024px) {
+  .eliah-product .eliah-pro__img {
+    height: 37rem !important;
+  }
+}
+@media (max-width: 892px) {
+  .eliah-product {
+    margin-left: 0.5rem;
+    width: 47% !important;
+    min-width: 32rem !important;
+  }
+  .eliah-product .eliah-pro__img {
+    height: 48rem !important;
+  }
+}
+@media (max-width: 785px) {
+  .eliah-product {
+    margin-left: 0.5rem;
+    width: 47% !important;
+    min-width: 27rem !important;
+  }
+  .eliah-product .eliah-pro__img {
+    height: 40rem !important;
+  }
+}
+@media (max-width: 669px) {
+  .eliah-product {
+    margin-left: 0.5rem;
+    width: 47% !important;
+  }
+  .eliah-product .eliah-pro__img {
+    height: 35rem !important;
+  }
+}
+@media (max-width: 585px) {
+  .products__list {
+    justify-content: center;
+  }
+
+  .eliah-product {
+    width: 95% !important;
+  }
+  .eliah-product .eliah-pro__img {
+    height: 50rem !important;
+  }
+}
+
+/*# sourceMappingURL=ful-4col.css.map */

@@ -1,0 +1,221 @@
+$primary-color: #f26460;
+$bgr-bd-color: #e1e1e1;
+$black-text-color:#111111;
+$grey-text-color: #888888;
+
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font2($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin  font($fsize, $fweight, $color) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+}
+
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flexc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexb() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+.top-top-bar{
+  height: 4rem;
+  width: 100%;
+  background-color: black;
+  @include flexc();
+  &>div{
+    width: 117rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top2-bar__icon{
+    margin-left: -2.3rem;
+    i{
+      color: white;
+      margin-left: 2.5rem;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+
+  .top2-bar__freeship{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  .top2-bar__choice{
+    select, span{
+      background-color: black;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 400;
+      // padding-left: 15px;
+    }
+
+    &>select:first-child{
+      width: 52px;
+    }
+  }
+}
+
+.top-bar{
+  
+  background-color: white !important;
+  a, i, span, div, h1{
+    color: $black-text-color !important;
+    &:hover{
+      color: $primary-color !important;
+    }
+  }
+  .top-bar__menu{
+    a{
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.cart-quantity{
+  font-weight: 500;
+  &:hover
+  {
+    span{
+      color: $primary-color !important;
+    }
+  }
+}
+.top-bar__icon-cart{
+  &:hover{
+    i, span{
+      color: $primary-color !important;
+    }
+  }
+}
+.hero{
+  height: 55rem !important;
+  &>div{
+    width: 117rem;
+    height: 100%;
+    text-align: left;
+    padding: 17rem 0 17rem 0;
+    &>div:first-of-type{
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: white;
+      line-height: 3rem;
+      letter-spacing: 5.1px;
+    }
+    &>div:nth-of-type(2){
+      font-size: 6rem;
+      font-weight: 700;
+      color: white;
+      margin-top: 2.5rem;
+    }
+
+    button{
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      background-color: $primary-color;
+      letter-spacing: 1.3px;
+      width: 18rem;
+      height: 5rem;
+      margin-top: 4rem;
+      &:hover
+      {
+        // background-color: #ee7975;
+        background-color: black;
+      }
+    }
+  }
+}
+
+
+.beauty-pros{
+  @include flexc();
+  .related-products{
+    width: 117rem;
+
+  }
+}
+
+.home-view-all{
+  // @include flexc();
+  width: fit-content;
+  margin: 0 auto;  
+  border-bottom: 1px solid $primary-color;
+  letter-spacing: 1.3px;
+  margin-top: 5rem;
+  padding-bottom: 5px;
+  // color: black;
+  a{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+    &:hover{
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+}
+
+.sv-book-service{
+  margin-top: 10rem;
+}

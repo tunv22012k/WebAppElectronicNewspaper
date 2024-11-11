@@ -1,0 +1,42 @@
+.shop-grid-sidebar__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullsb-main-content {
+  width: 162rem !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-sidebar {
+  width: 23rem;
+  height: 100vh;
+  background-color: #e1e1e1;
+  margin-top: 8rem;
+  order: 2;
+}
+
+.grid-pro-list {
+  width: 130rem !important;
+  order: 1;
+}
+
+.eliah-product {
+  margin-top: 3rem;
+  width: 31rem !important;
+}
+.eliah-product .eliah-pro__img {
+  height: 38.5rem !important;
+}
+
+.top-bar__content {
+  width: 162.5rem !important;
+}
+.top-bar__content .top-bar__menu {
+  margin-left: 12rem;
+}
+
+/*# sourceMappingURL=ful-rsb.css.map */

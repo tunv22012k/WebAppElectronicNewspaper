@@ -1,0 +1,26 @@
+﻿@model Magazine.Models.SubCategory
+
+@{
+    ViewBag.Title = "Xóa chuyên mục con";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml"; 
+}
+
+<h2>Xóa chuyên mục con</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dd>
+            Bạn có chắc chắn muốn xóa chuyên mục @Html.DisplayFor(model => model.SubCategoryName) không?
+        </dd>
+    </dl>
+</div>
+
+@using (Html.BeginForm("DeleteSubCategory", "Category", FormMethod.Post, new { area = "Admin" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.SubCategoryID)
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        @Html.ActionLink("Quay lại", "Index", "Category", new { area = "Admin" }, new { @class = "btn btn-outline-secondary" })
+    </div>
+}

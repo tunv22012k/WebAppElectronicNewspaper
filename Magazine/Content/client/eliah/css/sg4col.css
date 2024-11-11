@@ -1,0 +1,86 @@
+.shop-grid-4col__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.sg4-main-content {
+  width: 117rem;
+}
+
+.eliah-product {
+  margin-top: 3rem;
+}
+
+.sg4-top-choices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sg4-top-choices > div:first-child {
+  display: flex;
+}
+.sg4-top-choices > div:first-child i:hover {
+  color: #f26460;
+}
+.sg4-top-choices > div:first-child i:last-of-type {
+  margin-left: 1rem;
+}
+.sg4-top-choices > div:first-child span {
+  margin-left: 3rem;
+}
+.sg4-top-choices > div:last-child {
+  width: 20rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  height: 5rem;
+  background-color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sg4-top-choices select {
+  background-color: #e1e1e1;
+  border: none;
+  outline: none;
+}
+
+.page-nnum {
+  display: flex;
+  margin: 3rem auto 0 auto;
+  width: fit-content;
+}
+.page-nnum > div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+}
+.page-nnum > div:first-child {
+  color: white;
+  background-color: black;
+}
+.page-nnum > div:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.bottom-list-img {
+  overflow: hidden;
+}
+
+.products__list {
+  margin-top: -10px;
+}
+
+/*# sourceMappingURL=sg4col.css.map */

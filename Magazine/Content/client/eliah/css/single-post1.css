@@ -1,0 +1,82 @@
+.hero{
+  background-image: url('/public/img/maxresdefault.jpg');
+  position: relative;
+  background-size: cover;
+  z-index: -1;
+}
+.content-post__img>img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+.content-post__img{
+  overflow: hidden;
+}
+
+
+.slick-dots{
+  bottom: 10px !important; 
+  /* z-index: 900; */
+}
+
+.slick-next{
+  right:20px !important;
+}
+.slick-prev{
+  left:20px !important;
+  z-index: 9;
+}
+
+
+
+.lp-title{
+  position: relative;
+}
+.post-wishh{
+  width: 45px;height: 45px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(209, 205, 205);
+  position: absolute;
+  bottom: 70px;
+  right: -70px;
+  background-color: white;
+  visibility: visible;
+  transition: all 0.5s ease-in;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.post-wishh:hover i{
+  color: #f26460 !important;
+}
+
+.hero{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+ .hr-nav{
+   font-size: 14px;
+  position: absolute;
+  top: -130px;
+  z-index: 600;
+  color: white;
+}
+
+.hr-nav a{
+  color: white;
+  text-decoration: none;
+
+}
+.hr-nav a:hover{
+  color: #f26460;
+  cursor: pointer;
+}
+
+.mc-container{
+  position: relative;
+}

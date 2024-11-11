@@ -1,0 +1,51 @@
+﻿.search1-form
+{
+    width:100%;
+    position: relative;
+}
+
+.hero h1::before{
+    display: none
+}
+
+.top-bar .top-bar__logo h1:before {
+    left: 40px !important;
+}
+.footer__contact h1::before {
+    left: 54px !important;
+}
+
+.pretext {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 76px;
+
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    background-image: url('/Assets/client/image/wp5197082.jpg')
+}
+
+
+.lsb__search-bar form{
+    width:100%;
+}
+
+    .lsb__search-bar form input#it-search-lsb {
+        width: 93%;
+    }
+
+.hero > div h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: 0;
+    color: black;
+}

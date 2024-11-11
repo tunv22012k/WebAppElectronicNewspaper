@@ -1,0 +1,250 @@
+$primary-color: #f26460;
+$bgr-bd-color: #e1e1e1;
+$black-text-color:#111111;
+$grey-text-color: #888888;
+
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font2($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin  font($fsize, $fweight, $color) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+}
+
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flexc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexb() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+.sc-main{
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+}
+
+.products{
+  width: 117rem;
+}
+
+.pro-title{
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $black-text-color;
+  padding-bottom: 4.3rem;
+  border-bottom: 1px solid $bgr-bd-color;
+  &>div:first-child{
+    // width: 57rem;
+    width: 48.71795%;
+    
+  }
+  &>div:nth-child(2){
+    // width: 20rem;
+    width: 17.0941%;
+  }
+
+  &>div:last-child{
+    // width: 40rem;
+    width: 34.18795%;
+  }
+}
+.list-products{
+  &>.sc-pro:not(:last-child){
+    border-bottom: 1px solid $bgr-bd-color;
+  }
+}
+.sc-pro{
+  display: flex;
+  padding: 3.5rem 0 3.5rem 0;
+  flex-wrap: wrap;
+  .pro-info{
+    width: 48.71795%;
+    display: flex;
+    .pro-img{
+      width: 10rem;
+      height: 10rem;
+      background-color: $bgr-bd-color;   
+      &:hover{
+        background-color: $primary-color;
+        transform: scale(1.1);
+      }   
+    }
+    &>div:last-child{
+      // margin-left: 3rem;
+      line-height: 2.4rem;
+      margin: auto 0px;
+      margin-left: 3rem;
+      &>div:first-child{
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: $grey-text-color;
+      }
+      a{
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $black-text-color;
+      }
+    }
+  }
+  .pro-price{
+    width: 17.0941%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: $black-text-color;
+    margin: auto 0px;
+  }
+  .pro-stock{
+    width: 17.0941%;
+    margin: auto 0px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: $grey-text-color;
+  }
+  .add-remove{
+    width: calc(17.094%);
+    margin: auto 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+      width: 17rem;
+      height: 5rem;
+      background-color: black;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      line-height: 1.8rem;
+      // color: $grey-text-color;
+      padding: 0px;
+      border: 0px;
+      &:hover
+      {
+        cursor: pointer;
+        background-color: $primary-color;
+      }
+    }
+    i{
+      font-size: 2rem;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+
+@media (max-width:1205px){
+  .products
+  {
+    margin: 0 10px;
+  }
+  .pro-stock{
+    width: 13%;
+  }
+  .add-remove{
+    width: 21.1881%;
+  }
+}
+
+@media (max-width:1160px){
+  .add-remove i{
+    margin-left: 15px;
+  }
+
+  .add-remove button{
+    min-width: 8rem;
+  }
+}
+
+@media (max-width:730px){
+  .add-remove{
+    margin: 0 auto !important;
+    margin-top: 2rem !important;
+    width: 24rem !important;
+    button{
+      width: 15rem !important;
+      height: 4.5rem !important;
+      
+    }
+  }
+
+  .sc-pro{
+    justify-content: space-between;
+  }
+  .pro-title{
+    justify-content: space-between !important;
+    &>div:last-child{
+      width: 17.0941% !important;
+    }
+  }
+}
+
+
+@media (max-width:480px){
+  .hero h1{
+    font-size: 3rem !important;
+  }
+  .hero {
+    &>div{
+      &>div:last-child{
+        span{
+          font-size: 13px !important;
+        }
+      }
+    }
+    
+  }
+}

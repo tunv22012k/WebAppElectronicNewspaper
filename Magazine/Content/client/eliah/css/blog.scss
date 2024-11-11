@@ -1,0 +1,214 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18rem;
+  background-color: #e1e1e1;
+}
+.hero > div {
+  text-align: center;
+}
+.hero > div h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: black;
+}
+.hero > div > div span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.hero > div > div > span:last-child {
+  color: #f26460;
+}
+.hero > div > div > span:not(:first-child) {
+  margin-left: 5px;
+}
+
+.main-content {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.main-content .mc-container {
+  width: 117rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 !important;
+  flex-wrap: wrap;
+}
+
+.mc-lsb {
+  width: 33rem;
+}
+.mc-lsb h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #111111;
+}
+
+.lsb__search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.lsb__search-bar > div {
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e1e1e1;
+  height: 5rem;
+}
+.lsb__search-bar > div input {
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+}
+.lsb__search-bar > div i:hover {
+  color: #f26460;
+}
+
+.lsb__follow {
+  padding: 5rem 0px 5rem 0px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.lsb__follow div {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 21.5rem;
+}
+.lsb__follow div a {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lsb__follow div a:hover {
+  background-color: #f26460;
+  text-decoration: none;
+}
+.lsb__follow div a:hover > i {
+  color: white;
+}
+.lsb__follow div i {
+  color: black;
+}
+
+.lsb__category {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.lsb__category > div {
+  margin-top: 3rem;
+}
+.lsb__category > div a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: #888888;
+}
+.lsb__category > div a:hover {
+  color: #f26460;
+  text-decoration: none;
+}
+
+.lsb__popular-post {
+  padding-top: 4.5rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.lsb__popular-post .lsb__pp-post {
+  margin-top: 3rem;
+  display: flex;
+}
+.lsb__popular-post .lsb__pp-post > div:first-child {
+  width: 9rem !important;
+  height: 9rem;
+  background-color: #e1e1e1;
+  transition: all 0.2s ease-in-out;
+}
+.lsb__popular-post .lsb__pp-post > div:first-child:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.lsb__popular-post .lsb__pp-post .title {
+  margin-left: 2.8rem;
+  max-width: 21.6rem;
+}
+.lsb__popular-post .lsb__pp-post .title h3 a {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: 600;
+  color: #111111;
+  transition: all 0.1s ease-in-out;
+}
+.lsb__popular-post .lsb__pp-post .title h3 a:hover {
+  color: #f26460;
+}
+.lsb__popular-post .lsb__pp-post .title span {
+  margin-top: 0.4rem;
+  font-size: 1.3rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: #888888;
+}
+
+.lsb__newsletter {
+  padding-top: 4.5rem;
+}
+.lsb__newsletter > div:first-of-type {
+  margin-top: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #888888;
+  line-height: 2.8rem;
+}
+.lsb__newsletter > input:first-of-type {
+  outline: none;
+  width: 100%;
+  height: 5rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+.lsb__newsletter > div:last-of-type {
+  margin-top: 2rem;
+}
+.lsb__newsletter button {
+  width: 15rem;
+  height: 4.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  border: none;
+  margin-top: 2rem;
+}
+.lsb__newsletter button:hover {
+  color: #f26460;
+  background-color: #222121;
+}
+
+.mc-post {
+  width: 77rem;
+  background-color: #888888;
+  height: 70vh;
+}
+
+/*# sourceMappingURL=blog.scss.map */

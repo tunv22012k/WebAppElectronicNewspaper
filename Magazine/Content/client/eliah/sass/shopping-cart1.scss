@@ -1,0 +1,238 @@
+$primary-color: #f26460;
+$bgr-bd-color: #e1e1e1;
+$bgr-color-grey-l: #f7f5f4;
+$black-text-color:#111111;
+$grey-text-color: #888888;
+
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font2($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin  font($fsize, $fweight, $color) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+}
+
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flexc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexb() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+.title{
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $black-text-color;
+  padding-bottom: 4.3rem;
+  border-bottom: 1px solid $bgr-bd-color;
+  &>div:first-child{
+    width: 48.71795%;
+  }
+  &>div:nth-child(2), &>div:nth-child(3), &>div:nth-child(4){
+    width: 17.0941%;
+  }
+}
+
+.sc-pro{
+  display: flex;
+  &>div:first-child{
+    width: 48.71795%;
+  }
+  &>div:nth-child(2), &>div:nth-child(3), &>div:nth-child(4){
+    width: 17.0941%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: $black-text-color;
+  }
+}
+
+.total{
+  // display: flex;
+  justify-content: space-between;
+  i{
+    font-size: 2rem;
+    color: $primary-color;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+
+.quantity{
+  &>span:not(:first-child){
+    margin-left: 3rem;
+  }
+  i{
+    font-size: 1.8rem;
+    color: $grey-text-color;
+  }
+}
+
+.sc-pro:last-child{
+  border-bottom: 1px solid $bgr-bd-color;
+}
+
+
+.pro-choice{
+  margin-top: 5rem;
+  img{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  .choice1{
+    
+  }
+
+  .choice2{
+    display: flex;
+    &>div:first-child{
+      margin-right: 10rem;
+    }
+  }
+}
+
+.proceed-to-check{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7rem;
+
+  .apply-voucher{
+    width: 77rem;
+    height: 15rem;
+    background-color: #f7f5f4;
+    padding: 5rem;
+    display: flex;
+    label{
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      font-weight: 400;
+      color: $grey-text-color;
+    }
+    &>div:last-child{
+      display: flex;
+      button{
+        width: 11rem;
+        height: 4.6rem;
+        background-color: black;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        &:hover{
+          background-color: #2c2a2a;
+          color: $primary-color;
+        }
+        &:active, &:focus{
+          border-radius: 0;
+          outline: none;
+        }
+      }
+    }
+    input{
+      width: 29rem;
+      height: 4.6rem;
+      border: 1px solid $bgr-bd-color;
+      outline: none;
+      padding-left: 2rem;
+    }
+  }
+
+  .cart-total{
+    width: 37rem;
+    height: 27.5rem;
+    background-color: #f7f5f4;
+    padding: 4rem;
+    &>div:first-child{
+      font-weight: 600;
+      font-size: 2rem;
+      color: $black-text-color;
+      margin-bottom: 3.5rem;
+    }
+    .stotal{
+      margin-top: 0rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5rem;
+      line-height: 3.6rem;
+      font-weight: 400;
+      color: $black-text-color;
+      &>span:first-child{
+        font-size: 1.5rem;
+        line-height: 3.6rem;
+      }
+      &>span:last-child{
+        font-weight: 600;
+      }
+    }
+    button{
+      width: 100%;
+      height: 4.6rem;
+      border-radius: 0;
+      background-color: black;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      margin-top: 3rem;
+      &:active, &:focus{
+        border-radius: 0;
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.title {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111111;
+  padding-bottom: 4.3rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.title > div:first-child {
+  width: 48.71795%;
+}
+.title > div:nth-child(2), .title > div:nth-child(3), .title > div:nth-child(4) {
+  width: 17.0941%;
+}
+
+.sc-pro {
+  display: flex;
+}
+.sc-pro > div:first-child {
+  width: 48.71795%;
+}
+.sc-pro > div:nth-child(2), .sc-pro > div:nth-child(3), .sc-pro > div:nth-child(4) {
+  width: 17.0941%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #111111;
+}
+
+.total {
+  justify-content: space-between;
+}
+.total i {
+  font-size: 2rem;
+  color: #f26460;
+}
+.total i:hover {
+  color: #f26460;
+}
+
+.quantity > span:not(:first-child) {
+  margin-left: 3rem;
+}
+.quantity i {
+  font-size: 1.8rem;
+  color: #888888;
+}
+
+.sc-pro:last-child {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.pro-choice {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.pro-choice img:hover {
+  cursor: pointer;
+}
+.pro-choice .choice2 {
+  display: flex;
+}
+.pro-choice .choice2 > div:first-child {
+  margin-right: 10rem;
+}
+
+.proceed-to-check {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+.proceed-to-check .apply-voucher {
+  width: 77rem;
+  height: 15rem;
+  background-color: #f7f5f4;
+  padding: 5rem;
+  display: flex;
+}
+.proceed-to-check .apply-voucher label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: #888888;
+}
+.proceed-to-check .apply-voucher > div:last-child {
+  display: flex;
+}
+.proceed-to-check .apply-voucher > div:last-child button {
+  width: 11rem;
+  height: 4.6rem;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.proceed-to-check .apply-voucher > div:last-child button:hover {
+  background-color: #2c2a2a;
+  color: #f26460;
+}
+.proceed-to-check .apply-voucher > div:last-child button:active, .proceed-to-check .apply-voucher > div:last-child button:focus {
+  border-radius: 0;
+  outline: none;
+}
+.proceed-to-check .apply-voucher input {
+  width: 29rem;
+  height: 4.6rem;
+  border: 1px solid #e1e1e1;
+  outline: none;
+  padding-left: 2rem;
+}
+.proceed-to-check .cart-total {
+  width: 37rem;
+  height: 27.5rem;
+  background-color: #f7f5f4;
+  padding: 4rem;
+}
+.proceed-to-check .cart-total > div:first-child {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #111111;
+  margin-bottom: 3.5rem;
+}
+.proceed-to-check .cart-total .stotal {
+  margin-top: 0rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  color: #111111;
+}
+.proceed-to-check .cart-total .stotal > span:first-child {
+  font-size: 1.5rem;
+  line-height: 3.6rem;
+}
+.proceed-to-check .cart-total .stotal > span:last-child {
+  font-weight: 600;
+}
+.proceed-to-check .cart-total button {
+  width: 100%;
+  height: 4.6rem;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  margin-top: 3rem;
+}
+.proceed-to-check .cart-total button:active, .proceed-to-check .cart-total button:focus {
+  border-radius: 0;
+  outline: none;
+}
+
+/*# sourceMappingURL=shopping-cart1.css.map */

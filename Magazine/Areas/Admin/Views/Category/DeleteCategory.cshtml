@@ -1,0 +1,25 @@
+﻿@model Magazine.Models.Category
+
+@{
+    ViewBag.Title = "Xác nhận xóa chuyên mục";
+}
+
+<h2>Bạn có chắc chắn muốn xóa chuyên mục @Model.CategoryName không?</h2>
+
+@if (Model.SubCategories.Any())
+{
+    <p>Các chuyên mục con sau đây sẽ bị xóa cùng:</p>
+    <ol>
+        @foreach (var subCategory in Model.SubCategories)
+        {
+            <li>@subCategory.SubCategoryName</li>
+        }
+    </ol>
+}
+
+@using (Html.BeginForm("DeleteCategory", "Category", new { id = Model.CategoryID }, FormMethod.Post))
+{
+@Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='@Url.Action("Index", "Category")'">Hủy</button>
+}

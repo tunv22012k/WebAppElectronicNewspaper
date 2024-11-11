@@ -1,0 +1,30 @@
+.hero{
+  background-image: url('/public/img/asfad.jpg');
+  position: relative;
+  background-size: cover;
+}
+
+.hero h1::before{
+  display: none !important;
+}
+
+
+.bottom-list-img{
+  background-image: url('/public/img/vsdfdsf.jpg');
+  position: relative;
+  background-size: cover;
+}
+
+input:invalid {
+  border-color: red;
+}
+input,
+input:valid {
+  border-color: #ccc;
+}
+
+
+textarea{
+  resize: vertical;
+  min-height: 120px;
+}

@@ -1,0 +1,132 @@
+.contact-mc {
+  width: 117rem;
+}
+.contact-mc > div:first-child {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-mc .ct-titl {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 4rem;
+}
+.contact-mc .contact-info {
+  width: 42.735043%;
+}
+.contact-mc .contact-info .ct-info-detail {
+  display: flex;
+}
+.contact-mc .contact-info .ct-info-detail i {
+  font-size: 2.8rem;
+  color: #f26460;
+}
+.contact-mc .get-in-touch {
+  width: 57.265%;
+}
+.contact-mc .ct-info-title > div:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  color: #111111;
+}
+.contact-mc .ct-info-title > div:last-child {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+  color: #888888;
+}
+.contact-mc .ct-info-detail {
+  margin-top: 2rem;
+}
+.contact-mc .ct-info-detail > div:first-child {
+  width: 7rem;
+  padding-top: 5px;
+}
+
+.get-in-touch form input {
+  width: 100%;
+  height: 4.5rem;
+  padding-left: 2rem;
+  font-size: 1.3rem !important;
+  outline: none;
+  font-weight: 500;
+}
+.get-in-touch form input:not(:first-child) {
+  margin-top: 2rem;
+}
+.get-in-touch form input:first-child {
+  margin-top: 1rem;
+}
+.get-in-touch form #ct-input-btn {
+  width: 100%;
+  background-color: #111111;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+.get-in-touch form #ct-input-btn:hover {
+  background-color: #242222;
+  color: #f26460;
+}
+.get-in-touch form textarea {
+  width: 100%;
+  margin-top: 2rem;
+  height: 12rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  font-size: 1.3rem !important;
+  outline: none;
+  font-weight: 500;
+}
+
+.contact-maps {
+  width: 100%;
+  height: 40rem;
+  margin-top: 10rem;
+}
+
+@media (max-width: 1200px) {
+  .contact-mc {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 990px) {
+  .contact-mc > div:first-child {
+    justify-content: center;
+  }
+
+  .contact-info, .get-in-touch {
+    width: 100% !important;
+  }
+
+  .get-in-touch {
+    margin-top: 5rem;
+  }
+  .get-in-touch > div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+  .get-in-touch input, .get-in-touch textarea {
+    width: 85%;
+  }
+
+  .contact-info > div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-info > div {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

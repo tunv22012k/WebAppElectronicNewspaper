@@ -1,0 +1,116 @@
+$primary-color: #f26460;
+$bgr-bd-color: #e1e1e1;
+$black-text-color:#111111;
+$grey-text-color: #888888;
+
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font2($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin  font($fsize, $fweight, $color) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+}
+
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flexc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexb() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+
+.shop-grid-sidebar__content{
+  width: 100%;
+  @include flexc();
+}
+
+.fullsb-main-content{
+  width: 162rem !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.grid-sidebar{
+  width: 23rem;
+  height: 100vh;
+  background-color: $bgr-bd-color;
+  margin-top: 8rem;
+  order: 2;
+}
+
+.grid-pro-list{
+  width: 130rem !important;
+  order: 1;
+}
+
+
+.eliah-product{
+  margin-top: 3rem;
+  width: 31rem !important;
+  .eliah-pro__img{
+    height: 38.5rem !important;
+  }
+}
+
+
+
+.top-bar__content{
+  width: 162.5rem !important;
+  &>div:first-child{
+    
+  }
+
+
+  .top-bar__menu{
+    margin-left: 12rem;
+  }
+}

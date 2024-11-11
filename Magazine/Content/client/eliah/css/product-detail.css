@@ -1,0 +1,575 @@
+.pd-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pd-main-content {
+  width: 117rem;
+  margin-top: 10rem;
+}
+.pd-pro-detail {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pd-pro-detail .pd-img {
+  width: 55rem;
+  position: relative;
+}
+.pd-pro-detail .pd-img .pd-bigimg {
+  width: 100%;
+  height: 70rem;
+  background-color: #e1e1e1;
+  overflow: hidden;
+}
+.pd-pro-detail .pd-img .pd-bigimg img {
+  object-fit: unset;
+}
+.pd-pro-detail .pd-img .slick-pd-img {
+  margin-top: 2.5rem;
+}
+.pd-pro-detail .pd-img .slick-pd-img img {
+  margin-right: 2rem;
+  width: 11rem;
+  height: 11rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+.pd-pro-detail .pd-info {
+  width: 55rem;
+}
+
+.pd-button-slick {
+  position: absolute;
+  top: 76.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+}
+
+.pd-slick-pre {
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 100% !important;
+  background-color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pd-slick-pre:hover {
+  cursor: pointer;
+}
+
+.pd-slick-next {
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 100% !important;
+  background-color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pd-slick-next:hover {
+  cursor: pointer;
+}
+
+.info-pro {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 3.8rem;
+}
+.info-pro > div:first-child {
+  font-size: 1.3rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  color: #888888;
+}
+.info-pro > div:nth-child(2) {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: #111111;
+}
+.info-pro .pd-star {
+  margin-top: 5px;
+  display: flex;
+}
+.info-pro .pd-star > div {
+  max-width: 6.4rem;
+}
+.info-pro .pd-star > div i {
+  color: #edbf1b;
+  font-size: 1.1rem;
+  margin: 0px;
+}
+.info-pro .pd-star > div .far.fa-star:not(:first-child) {
+  margin-left: -4.5px;
+}
+.info-pro .pd-star span {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  color: #111111;
+  margin-left: 1.8rem;
+}
+.info-pro > div:last-of-type {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #f26460;
+  margin-top: 1.7rem;
+}
+
+.pd-detail {
+  padding: 4rem 0 5rem 0;
+}
+.pd-detail > div:first-of-type, .pd-detail > div:nth-of-type(2), .pd-detail > div:nth-of-type(3), .pd-detail > div:nth-of-type(4) {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #888888;
+}
+.pd-detail > div:first-of-type span, .pd-detail > div:nth-of-type(2) span, .pd-detail > div:nth-of-type(3) span, .pd-detail > div:nth-of-type(4) span {
+  color: #111111;
+  font-weight: 500;
+}
+.pd-detail .pd-color {
+  display: flex;
+  align-items: center;
+}
+.pd-detail .pd-color span {
+  color: #111111;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+.pd-detail .pd-color .list-color {
+  margin-left: 1rem;
+}
+.pd-detail .pd-color .list-color input {
+  display: none;
+}
+.pd-detail .pd-color .list-color input:checked ~ .color-checkmark::before {
+  display: block;
+}
+.pd-detail .pd-color .list-color div {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+  position: relative;
+}
+.pd-detail .pd-color .list-color label:hover {
+  cursor: pointer;
+}
+.pd-detail .pd-color .list-color label:first-child {
+  margin-left: 2px;
+}
+.pd-detail .pd-color .list-color label:not(:first-child) {
+  margin-left: 0.2rem;
+}
+.pd-detail .pd-color .list-color > label:first-child > div {
+  background-color: #653728;
+}
+.pd-detail .pd-color .list-color > label:first-child > div::before {
+  width: 130%;
+  height: 130%;
+  background-color: inherit;
+  content: " ";
+  position: absolute;
+  top: -15%;
+  left: -14%;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #653728;
+  display: none;
+}
+.pd-detail .pd-color .list-color > label:nth-child(2) > div {
+  background-color: #dba07a;
+}
+.pd-detail .pd-color .list-color > label:nth-child(2) > div::before {
+  width: 130%;
+  height: 130%;
+  background-color: inherit;
+  content: " ";
+  position: absolute;
+  top: -15%;
+  left: -13%;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #dba07a;
+  display: none;
+}
+.pd-detail .pd-color .list-color > label:nth-child(3) > div {
+  background-color: #dab8b2;
+}
+.pd-detail .pd-color .list-color > label:nth-child(3) > div::before {
+  width: 130%;
+  height: 130%;
+  background-color: inherit;
+  content: " ";
+  position: absolute;
+  top: -15%;
+  left: -13%;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #dab8b2;
+  display: none;
+}
+
+.pd-add {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 4rem;
+}
+.pd-add > div:first-child {
+  width: 17rem;
+  height: 5rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+}
+.pd-add > div:first-child input, .pd-add > div:first-child button {
+  border: none;
+  outline: none;
+  background-color: white;
+  height: fit-content;
+}
+.pd-add > div:first-child input[type=number]::-webkit-inner-spin-button,
+.pd-add > div:first-child input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pd-add > div:first-child #pd-number {
+  width: 7rem !important;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: black;
+}
+.pd-add > div:first-child i:hover {
+  color: #f26460;
+}
+.pd-add > div:nth-child(2) {
+  width: 21rem;
+  height: 5rem;
+  border-radius: 3rem;
+  background-color: black;
+}
+.pd-add > div:nth-child(2):hover {
+  background-color: #383636;
+  cursor: pointer;
+}
+.pd-add > div:nth-child(2) #sub-prod {
+  display: none;
+}
+.pd-add > div:nth-child(2) .button-add {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 3.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+.pd-add > div:nth-child(2) .button-add:hover {
+  cursor: pointer;
+}
+.pd-add > div:nth-child(2) .button-add div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #f26460;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pd-add > div:nth-child(2) .button-add div i {
+  color: white;
+}
+.pd-add .pre-view, .pd-add .pro-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid #e1e1e1;
+  width: 5rem;
+  height: 5rem;
+}
+.pd-add .pre-view:hover, .pd-add .pro-heart:hover {
+  background-color: #f26460;
+  color: white;
+  cursor: pointer;
+}
+
+.pd-description {
+  padding-top: 5rem;
+}
+.pd-description .slick-dots-description div {
+  width: fit-content !important;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #888888;
+}
+.pd-description .slick-dots-description div:hover {
+  color: #111111;
+}
+.pd-description .slick-dots-description > div:not(:first-child).slick-slide {
+  margin-left: 2rem !important;
+}
+.pd-description .slick-dots-description .slick-list {
+  width: 100%;
+  padding: 0 !important;
+}
+.pd-description .slick-dots-description .slick-track {
+  width: 100% !important;
+  display: flex;
+}
+.pd-description .slick-dots-description .slick-track span {
+  margin-left: 2rem;
+}
+.pd-description .slick-dots-description .slick-slide {
+  outline: none;
+  height: 2rem;
+}
+.pd-description .slick-dots-description .slick-slide:hover {
+  color: #111111 !important;
+  cursor: pointer;
+}
+.pd-description .slick-dots-description .slick-slide:active {
+  outline: none;
+  border: none;
+  color: #111111;
+}
+.pd-description .slick-dots-description .slick-current {
+  color: #111111 !important;
+}
+.pd-description > div:first-child {
+  display: flex;
+}
+.pd-description p {
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  line-height: 2.7rem;
+  font-weight: 400;
+  color: #888888;
+}
+
+.related-products {
+  padding-top: 10rem;
+}
+.related-products h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__list {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.products__list .eliah-product {
+  width: 27rem;
+}
+.products__list .eliah-product .eliah-pro__img {
+  width: 100%;
+  height: 34.5rem;
+  background-color: #e1e1e1;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.products__list .eliah-product .eliah-pro__img:hover {
+  background-color: #f26460;
+}
+.products__list .eliah-product .eliah-pro__img:hover .eliah-pro__quick-choice {
+  transition: all 0.2s linear;
+  display: flex;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro-sale {
+  position: absolute;
+  width: 5.1rem;
+  height: 2.2rem;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 4px;
+  top: 12px;
+  left: 12px;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro-sale::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 16px;
+  border-top: 10px solid red;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro-new {
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 5.1rem;
+  height: 2.2rem;
+  background-color: #1a7be9;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  top: 12px;
+  left: 12px;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro-new::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 16px;
+  border-top: 10px solid #1a7be9;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice {
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-color: #fcfdfd;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem 0 5rem;
+  align-items: center;
+  bottom: 0;
+  display: none;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice i {
+  color: black;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice > div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice > div:hover {
+  background-color: #f26460;
+  border-color: #f26460;
+  color: white;
+  cursor: pointer;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice > div:hover i {
+  color: white;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice .eliah-pro__add-to-cart {
+  position: relative;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice .eliah-pro__add-to-cart:hover .eliah-pro__add-hover {
+  display: flex;
+  transition: display 0.5s linear;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice .eliah-pro__add-to-cart .eliah-pro__add-hover {
+  background-color: #111111;
+  border-radius: 7px;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 101px;
+  height: 28px;
+  top: -4.5rem;
+  display: none;
+}
+.products__list .eliah-product .eliah-pro__img .eliah-pro__quick-choice .eliah-pro__add-to-cart .eliah-pro__add-hover::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 40px;
+  border-top: 10px solid black;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.products__list .eliah-product .eliah-pro__info {
+  margin-top: 2.5rem;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-category-star {
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-category-star span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #888888;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-category-star .eliah-pro__info-star {
+  max-width: 6.4rem;
+  flex-wrap: nowrap;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-category-star .eliah-pro__info-star i {
+  color: #edbf1b;
+  font-size: 1.1rem;
+  margin: 0px;
+  position: relative;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-category-star .eliah-pro__info-star > i:not(:first-child) {
+  margin-left: -4.5px;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #111111;
+  line-height: 2.4rem;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-name:hover {
+  color: #f26460;
+  font-weight: 500;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-price {
+  margin-top: 5px;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-price-unsale {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: #888888;
+  text-decoration: line-through;
+  margin-left: 0.6rem;
+}
+.products__list .eliah-product .eliah-pro__info .eliah-pro__info-price-saled {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111111;
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=product-detail.css.map */

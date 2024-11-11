@@ -1,0 +1,245 @@
+.hero {
+  height: 60rem;
+}
+
+.mc-post {
+  width: 84rem;
+  padding-left: 7rem;
+  margin-top: -15rem;
+  padding-top: 5rem;
+  background-color: white;
+}
+.mc-post .mcp__lp-title {
+  position: unset !important;
+  padding-top: 0px;
+}
+.mc-post .mcp__lp-title a {
+  text-decoration: none !important;
+}
+
+.content-post b {
+  font-weight: 600;
+  color: #111111;
+}
+.content-post p {
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+  color: #444444;
+  text-align: justify;
+}
+.content-post .content-post__img {
+  margin-top: 4rem;
+  height: 38.5rem;
+  width: 100%;
+  background-color: #e1e1e1;
+}
+.content-post .the-sayings {
+  margin-top: 4rem;
+  border-top: 1px solid #f26460;
+  border-bottom: 1px solid #f26460;
+  padding: 4rem 4rem 4rem 5rem;
+}
+.content-post .the-sayings > div:first-child {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3.6rem;
+  color: #111111;
+}
+.content-post .the-sayings > div:last-child {
+  margin-top: 5px;
+  display: flex;
+}
+.content-post .the-sayings > div:last-child img {
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+}
+.content-post .the-sayings > div:last-child span {
+  margin-left: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: #888888;
+}
+
+.tag-share {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tag-share > div {
+  display: flex;
+}
+.tag-share span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111111;
+  display: flex;
+  align-items: center;
+}
+
+.ts-tag span {
+  margin-right: 1rem;
+}
+.ts-tag div {
+  margin-left: 1rem;
+  padding: 7px 15px 7px 15px;
+  background-color: #e1e1e1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ts-share span {
+  margin-right: 1rem;
+}
+.ts-share i {
+  margin-left: 2.7rem;
+  display: flex;
+  align-items: center;
+}
+.ts-share .fa-facebook-f {
+  color: #2463ac;
+}
+.ts-share .fa-twitter {
+  color: #00c4fc;
+}
+.ts-share .fa-instagram {
+  color: #df42c5;
+}
+.ts-share .fa-youtube {
+  color: #ff081c;
+}
+
+.p-n {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #e1e1e1;
+  align-items: center;
+  margin-top: 7rem;
+}
+.p-n > a {
+  display: flex;
+}
+.p-n > a:hover {
+  text-decoration: none;
+}
+.p-n > a:hover > span, .p-n > a:hover > i {
+  color: #f26460;
+}
+.p-n span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: #111111;
+}
+.p-n i {
+  font-size: 1rem;
+  color: black;
+}
+
+.pn-pre span {
+  margin-left: 10px;
+}
+
+.pn-next span {
+  margin-right: 10px;
+}
+
+.comments {
+  margin-top: 7rem;
+}
+.comments > div {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #111111;
+  display: flex;
+  justify-content: center;
+}
+.comments form {
+  margin-top: 4rem;
+}
+.comments form > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.comments form input {
+  width: 24.5rem;
+  height: 4.6rem;
+  outline: none;
+  border-radius: 0;
+  border: 1px solid #e1e1e1;
+  padding-left: 2rem;
+}
+.comments form textarea {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  resize: none;
+  outline: none;
+  border-radius: 0;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  height: 11rem;
+}
+.comments form .btn-sb-cmtt {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.comments form #btn-sb-cmt {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  background-color: #f26460;
+  letter-spacing: 1.3px;
+  margin-top: 0px auto;
+}
+.comments form #btn-sb-cmt:hover {
+  font-size: 1.4rem;
+  color: #111111;
+  background-color: #ec9a98;
+}
+
+@media (max-width: 643px) {
+  .ts-share {
+    margin-top: 15px;
+  }
+
+  .tag-share {
+    justify-content: center;
+  }
+}
+@media (max-width: 790px) {
+  .list-input-sp > input:nth-child(3) {
+    margin-top: 20px;
+    width: 90%;
+  }
+  .list-input-sp > input:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 556px) {
+  .list-input-sp {
+    justify-content: center;
+  }
+  .list-input-sp > input:nth-child(2) {
+    margin-top: 20px;
+    width: 90%;
+  }
+  .list-input-sp > input:nth-child(2) {
+    margin-left: 0px;
+  }
+  .list-input-sp > input:first-child {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=single-post.css.map */

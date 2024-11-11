@@ -1,0 +1,256 @@
+
+
+:root {
+  --orange-red: #f26460;
+  --grey-background: #e1e1e1;
+  --near-black: #111111;
+  --grey-text: #888888;
+  --near-red: #552a29;
+  --Spartan: 'Spartan', sans-serif;
+}
+
+.row{
+ display: flex;
+ justify-content: space-between; 
+ margin: 0px; 
+ padding:0px -15px 0px -15px !important;
+}
+
+.checkout-info{
+  padding-top: 100px;
+  max-width: 770px;
+}
+.order-info{
+  
+}
+.contact-info-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info-title>span, .title-shipping{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  font-family: var(--Spartan);
+}
+
+.already-account{
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: var(--Spartan);
+  color: #444444;
+}
+
+.login{
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: var(--Spartan);
+  color: #f26460;
+}
+
+
+.input-contact{
+  width: 100%;
+  height: 46px;
+  padding-left: 20px;
+  margin-top: 25px;
+}
+.col-nopadding{
+  padding: 0px;
+}
+
+
+.input-check-contact, .save-info{
+  margin-top: 30px;
+  font-size: 14px;
+  color: #444444;
+  font-weight: 500;
+}
+
+input{
+  padding-left: 20px;
+  border-color: #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.shipping-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipping-info input:not(#my-input){
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #888888;
+  font-weight: 500;
+  font-family: var(--Spartan);
+}
+
+.input-haft-width{
+  width: 375px !important;
+  height: 45px;
+}
+
+.shipping-info>div
+{
+  margin-top: 30px;
+}
+
+.shipping-info>div>div:first-child, .midium-title{
+  font-size: 14px;
+  color: #444444;
+  font-weight: 500;
+  font-family: var(--Spartan);
+}
+
+/* right side bar */
+.order-info{
+  width: 360px;
+  background-color: #f7f5f4;
+  padding: 30px;
+  margin-top: 100px;
+  height: fit-content;
+}
+
+.your-order{
+  font-size:20px;
+  /* color: #444444; */
+  font-weight: 600;
+  font-family: var(--Spartan);
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 30px;
+}
+
+.list-products{
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-products:hover{
+  /* font-size: 15px; */
+  color: #f26460;
+  cursor: pointer;
+}
+
+.coupon-code div:first-child, .title-products, .order-total div span:first-child{
+  font-size:16px;
+  /* color: #444444; */
+  font-weight: 600;
+  font-family: var(--Spartan);
+  /* border-bottom: 1px solid #e1e1e1; */
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.coupon-code input{
+  width: 100%;
+  height: 45px;
+  font-size: 14px;
+
+}
+
+.coupon-code div:last-child{
+  font-size:13px;
+  color: white;
+  font-weight: 600;
+  font-family: var(--Spartan);
+  background-color: black;
+  letter-spacing: 1.3px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+
+.coupon-code div:last-child:hover
+{
+  cursor: pointer;
+}
+
+
+.list-products>div span:first-child, .list-products>div span:last-child, .order-total div span:last-child{
+  font-size:14px;
+  line-height: 36px;
+  /* color: white; */
+  font-weight: 600;
+  font-family: var(--Spartan);
+  /* background-color: black; */
+  color: #444444;
+}
+.list-products>div span:last-child{
+  font-weight: 500;
+}
+
+.list-products div:last-child, .choice-payments input{
+  font-size:14px;
+  line-height: 36px;
+  /* color: white; */
+  font-weight: 600;
+  font-family: var(--Spartan);
+  /* background-color: black; */
+  color: #444444;
+
+}
+
+#side-bar-need-border{
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 20px;
+}
+
+.order-total{
+  /* padding-top: 30px; */
+}
+
+.order-total div{
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.order-total div span:last-child{
+  color: #e9625c;
+  display: flex;
+  align-items: center;
+}
+
+.order-total div:last-child{
+  margin-top: -30px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+
+.choice-payments{
+  padding-top: 30px;
+  display: block;
+}
+.choice-payments div:not(:first-child){
+  margin-top: 20px;
+}
+
+.button-order{
+  margin-top: 25px;
+  background-color: #e9625c;
+  font-family: var(--Spartan);
+  font-size: 13px;
+  letter-spacing: 1.3px; 
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  color: white;
+}
+
+.button-order:hover{
+  cursor: pointer;
+}

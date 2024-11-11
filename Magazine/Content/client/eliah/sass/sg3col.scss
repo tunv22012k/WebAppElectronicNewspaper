@@ -1,0 +1,166 @@
+$primary-color: #f26460;
+$bgr-bd-color: #e1e1e1;
+$black-text-color:#111111;
+$grey-text-color: #888888;
+
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font2($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin  font($fsize, $fweight, $color) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+}
+
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flexc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexb() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+.shop-grid-3col__content{
+  @include flexc();
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.sg3-main-content{
+  width: 117rem;
+}
+
+.products__list{
+  margin-top: -10px;
+}
+
+.eliah-product{
+  margin-top: 3rem;
+  width: 37rem !important;
+  .eliah-pro__img{
+    height: 47rem !important;
+  }
+
+  .eliah-pro__quick-choice{
+    padding: 0 10rem 0 10rem !important;
+  }
+
+  .eliah-pro__info-name{
+    font-size: 1.6rem !important;
+  }
+}
+
+
+.sg3-top-choices{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &>div:first-child{
+    display: flex;
+    i{
+      &:hover{
+        color: $primary-color;
+      }
+      &:last-of-type{
+        margin-left: 1rem;
+      }
+    }
+    span{
+      margin-left: 3rem;
+    }
+  }
+  &>div:last-child{
+    width: 20rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    height: 5rem;
+    background-color: $bgr-bd-color;
+    @include flexc();
+  }
+  select{
+    background-color: $bgr-bd-color;
+    // padding: 0 0rem 0 3rem;
+    border: none;
+    outline: none;
+  }
+}
+
+
+.page-nnum{
+  display: flex;
+  margin: 3rem auto 0 auto;
+  width: fit-content;
+  // margin-left: -1rem;
+  &>div{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    border: 1px solid $bgr-bd-color;
+    @include flexc();
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black;
+    &:first-child{
+      color: white;
+      background-color: black;
+    }
+    &:hover{
+      color: white;
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+.bottom-list-img{
+  overflow: hidden;
+}
+

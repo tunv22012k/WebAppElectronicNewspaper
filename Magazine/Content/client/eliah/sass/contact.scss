@@ -1,0 +1,220 @@
+$primary-color: #f26460;
+$bgr-bd-color: #e1e1e1;
+$black-text-color:#111111;
+$grey-text-color: #888888;
+
+@mixin  font4($fsize, $fweight, $lineheight, $letterspaceing) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspaceing;
+}
+
+@mixin  font2($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin  font($fsize, $fweight, $color) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+}
+
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin position($direction: "both") {
+  position: absolute;
+
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin flexc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexb() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin wh($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+.contact-mc{
+  width: 117rem;
+  &>div:first-child{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .ct-titl{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $black-text-color;
+    margin-bottom: 4rem;
+  }
+
+  .contact-info{
+    width: 42.735043%;
+    .ct-info-detail{
+      display: flex;
+      &>div{
+        // margin-left: 4rem;
+      }
+      i{
+        font-size: 2.8rem;
+        color: $primary-color;
+      }
+    }
+  }
+  .get-in-touch{
+    width: 57.265%;
+  }
+
+ 
+
+  .ct-info-title{
+    &>div:first-child{
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 3.2rem;
+      color: $black-text-color;
+    }
+    &>div:last-child{
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 3.2rem;
+      color: $grey-text-color;
+    }
+  }
+
+  .ct-info-detail{
+    &>div:first-child{
+      width: 7rem;
+      padding-top: 5px;
+    }
+    margin-top: 2rem;
+  }
+}
+
+
+.get-in-touch{
+  form{
+    input{
+      width: 100%;
+      height: 4.5rem;
+      padding-left: 2rem;
+      font-size: 1.3rem !important; 
+      outline: none;
+      font-weight: 500;
+      &:not(:first-child){
+        margin-top: 2rem;
+      }
+      &:first-child{
+        margin-top: 1rem;
+      }
+    }
+    #ct-input-btn{
+      width: 100%;
+      background-color: #111111;
+      color: white;
+      outline: none;
+      border: none;
+      border-radius: 0;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      &:hover{
+        background-color: #242222;
+        color: $primary-color;
+      }
+    }
+    textarea{
+      width: 100%;
+      margin-top: 2rem;
+      height: 12rem;
+      padding-left: 2rem;
+      padding-top: 2rem;
+      font-size: 1.3rem !important;
+      outline: none;
+      font-weight: 500;
+    }
+  }
+}
+
+.contact-maps{
+  width: 100%;
+  height: 40rem;
+  margin-top: 10rem;
+}
+
+
+@media (max-width:1200px){
+  .contact-mc{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+
+@media (max-width:990px){
+  .contact-mc{
+    &>div:first-child{
+      justify-content: center;
+    }
+  }
+  .contact-info, .get-in-touch{
+    width: 100% !important;
+  }
+
+  .get-in-touch{
+    margin-top: 5rem;
+    &>div:first-child{
+      display: flex;
+      justify-content: center;
+    }
+    input, textarea{
+      width: 85%;
+    }
+  }
+
+  .contact-info{
+    &>div:first-child{
+      display: flex;
+      justify-content: center;
+    }
+    &>div{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

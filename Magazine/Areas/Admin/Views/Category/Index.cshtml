@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Magazine.Models.Category>
+
+@{ 
+    ViewBag.Title = "Danh sách chuyên mục";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml"; 
+}
+
+<h2>Danh sách chuyên mục</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        @Html.ActionLink("Thêm chuyên mục cha", "AddCategory", "Category", new { area = "Admin" }, new { @class = "btn btn-primary" })
+    </div>
+    <p></p>
+</div>
+
+<div class="col-md-8">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Chuyên mục cha</th>
+                <th>Chuyên mục con</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                int index = 1; 
+            }
+
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@category.CategoryName</td>
+                    <td>-</td> 
+                    <td>
+                        @Html.ActionLink("Thêm chuyên mục con", "AddSubcategory", new { categoryId = category.CategoryID }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Sửa", "EditCategory", new { id = category.CategoryID }, new { @class = "btn btn-warning" }) |
+                        @Html.ActionLink("Xóa", "DeleteCategory", new { id = category.CategoryID }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+                foreach (var subCategory in category.SubCategories)
+                {
+                    <tr>
+                        <td></td> 
+                        <td></td> 
+                        <td>@subCategory.SubCategoryName</td> 
+                        <td>
+                            @Html.ActionLink("Sửa", "EditSubCategory", new { id = subCategory.SubCategoryID }, new { @class = "btn btn-warning" }) |
+                            @Html.ActionLink("Xóa", "DeleteSubCategory", new { id = subCategory.SubCategoryID }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+                index++;
+            }
+        </tbody>
+    </table>
+</div>

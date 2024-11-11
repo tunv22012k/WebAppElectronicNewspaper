@@ -1,0 +1,137 @@
+.top-top-bar {
+  height: 4rem;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-top-bar > div {
+  width: 117rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-top-bar .top2-bar__icon {
+  margin-left: -2.3rem;
+}
+.top-top-bar .top2-bar__icon i {
+  color: white;
+  margin-left: 2.5rem;
+}
+.top-top-bar .top2-bar__icon i:hover {
+  color: #f26460;
+}
+.top-top-bar .top2-bar__freeship {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 400;
+}
+.top-top-bar .top2-bar__choice select, .top-top-bar .top2-bar__choice span {
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.top-top-bar .top2-bar__choice > select:first-child {
+  width: 52px;
+}
+
+.top-bar {
+  background-color: white !important;
+}
+.top-bar a, .top-bar i, .top-bar span, .top-bar div, .top-bar h1 {
+  color: #111111 !important;
+}
+.top-bar a:hover, .top-bar i:hover, .top-bar span:hover, .top-bar div:hover, .top-bar h1:hover {
+  color: #f26460 !important;
+}
+.top-bar .top-bar__menu a {
+  font-weight: 600 !important;
+}
+
+.cart-quantity {
+  font-weight: 500;
+}
+.cart-quantity:hover span {
+  color: #f26460 !important;
+}
+
+.top-bar__icon-cart:hover i, .top-bar__icon-cart:hover span {
+  color: #f26460 !important;
+}
+
+.hero {
+  height: 55rem !important;
+}
+.hero > div {
+  width: 117rem;
+  height: 100%;
+  text-align: left;
+  padding: 17rem 0 17rem 0;
+}
+.hero > div > div:first-of-type {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  line-height: 3rem;
+  letter-spacing: 5.1px;
+}
+.hero > div > div:nth-of-type(2) {
+  font-size: 6rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 2.5rem;
+}
+.hero > div button {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: #f26460;
+  letter-spacing: 1.3px;
+  width: 18rem;
+  height: 5rem;
+  margin-top: 4rem;
+}
+.hero > div button:hover {
+  background-color: black;
+}
+
+.beauty-pros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.beauty-pros .related-products {
+  width: 117rem;
+}
+
+.home-view-all {
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 1px solid #f26460;
+  letter-spacing: 1.3px;
+  margin-top: 5rem;
+  padding-bottom: 5px;
+}
+.home-view-all a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+.home-view-all a:hover {
+  text-decoration: none;
+  color: #f26460;
+}
+
+.sv-book-service {
+  margin-top: 10rem;
+}
+
+/*# sourceMappingURL=home1.css.map */

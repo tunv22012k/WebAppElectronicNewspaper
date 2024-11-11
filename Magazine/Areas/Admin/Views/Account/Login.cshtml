@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = null;
+}
+@model Magazine.Areas.Admin.ViewModels.LoginViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Areas/Admin/Content/css/login-style.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")" data-deferred="1"></script>
+    <link rel="stylesheet" href="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("https://pro.fontawesome.com/releases/v5.10.0/css/all.css")" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="@Url.Content("https://fonts.googleapis.com")">
+    <link rel="preconnect" href="@Url.Content("https://fonts.gstatic.com")" crossorigin>
+    <link href="@Url.Content("https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap")" "stylesheet">
+    <link href="@Url.Content("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap")" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js">
+        <div class="animated bounceInDown">
+            <div class="container">
+                <span class="error animated tada" id="msg"></span>
+                @using (Html.BeginForm(null, null, new { },
+                       FormMethod.Post, new { @class = "box", name = "form1", onsubmit = "return checkStuff()" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="logo">
+                        <i class="fas fa-hat-wizard"></i>
+                        <span>Magazine</span>
+                    </div>
+                    <h4>Admin<span>Dashboard</span></h4>
+                    <h5>Đăng nhập vào tài khoản của bạn.</h5>
+                        @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+                        @Html.TextBoxFor(model => model.Username, new { @name = "Tên đăng nhập", @type = "text", @placeholer = "Tên đăng nhập", @autocomplete = "off", @autofocus = "autofocus" })
+                    <i class="typcn typcn-eye" id="eye"></i>
+                        @Html.TextBoxFor(model => model.PasswordHash, new { @name = "Mật khẩu", @id = "pwd", @type = "password", @placeholer = "Mật khẩu", @autocomplete = "off" })
+                    <label class="lb-rmb">
+                        @Html.CheckBoxFor(model => model.Remember)
+                        <medium class="rmb">Lưu mật khẩu</medium>
+                    </label>
+                    <a href="#" class="forgetpass">Quên mật khẩu?</a>
+                    <input type="submit" value="Đăng nhập" class="btn1">
+                }
+                <a href="#" class="dnthave">Bạn đã có tài khoản? Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Areas/Admin/Content/js/login-script.js")"></script>
+</body>
+</html>
