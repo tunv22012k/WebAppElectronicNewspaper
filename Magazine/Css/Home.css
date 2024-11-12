@@ -1,0 +1,191 @@
+/* header-top */
+.header-top {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo img {
+    height: 39px;
+    width: auto;
+}
+
+.onboarding {
+    display: flex;
+}
+
+.onboarding-dec {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    border-right: solid 1px #e1dbdb;
+    padding-left: 8px;
+}
+
+    .onboarding-dec img {
+        height: 30px;
+    }
+
+    .onboarding-dec button {
+        font-size: 19px;
+        border: none;
+        background: none;
+    }
+
+        .onboarding-dec button:hover {
+            color: dodgerblue;
+        }
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+    .search .fas {
+        margin-top: 11px;
+        font-size: 19px;
+        color: gray;
+    }
+
+    .search button {
+        height: 40px;
+        font-size: 20px;
+        border: none;
+        background: none;
+    }
+
+        .search button:hover {
+            color: dodgerblue;
+        }
+
+/* Main Content  */
+
+.content-main {
+    margin-top: 15px;
+    gap: 10px;
+    border-left: solid 1px rgb(214, 210, 210);
+}
+
+.content-left {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+    .content-left a {
+        color: black;
+    }
+
+.card {
+    margin: 30px 0px 0px 30px;
+}
+
+.mb-4 {
+    margin-top: 10px;
+}
+
+/* news-category */
+.news-category {
+    display: flex;
+}
+
+.news {
+}
+
+.news-detail {
+    display: flex;
+    margin-top: 20px;
+}
+
+.news-des {
+    margin-left: 10px !important;
+}
+
+.news img {
+    width: 250px;
+    height: auto;
+}
+
+.news-des p {
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}
+
+.news-des h5 {
+    cursor: pointer;
+    text-align: left;
+}
+
+.news-des h5:hover {
+    color: blue;
+}
+
+.category {
+    width: 50%;
+}
+
+.card-text-p {
+    font-size: 15px;
+}
+
+.category-detail {
+    display: flex;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.details {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.p_note {
+    margin-bottom: 0px;
+}
+
+.title {
+    text-align: center;
+}
+
+.img_details {
+    text-align: center;
+}
+
+.img_details img {
+    width: 100%;
+}
+
+.form_comment {
+    margin-left: 20px;
+}
+
+.name_comment {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.date_comment {
+    font-size: 12px;
+    color: #636363;
+}
+
+.form_user_cmt {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.clickBtnCmt {
+    margin-left: 20px;
+}
+
+.style_input {
+    width: 100%;
+    border-radius: 5px;
+}

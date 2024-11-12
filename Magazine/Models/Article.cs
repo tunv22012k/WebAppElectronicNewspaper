@@ -32,6 +32,7 @@ namespace Magazine.Models
         [ForeignKey("Category")]
         public int CategoryID { get; set; }
         public Category Category { get; set; }
+        public ICollection<Comment> Comments { get; set; }
         public string ApprovalStatus { get; set; }
         public string Feedback { get; set; }
     }

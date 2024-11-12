@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Magazine.Models;
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Magazine.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly MagazineDbContext db = new MagazineDbContext();
+
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var articles = db.Articles.Include("Category").ToList();
+            return View(articles);
         }
     }
 }

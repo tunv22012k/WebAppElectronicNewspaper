@@ -1,0 +1,162 @@
+﻿@model Magazine.Models.Article
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- new-category -->
+<div class="container">
+    <div class="details">
+        <p class="p_note"><b>Ngày đăng:</b> @(Model.PostTime)</p>
+        <p><b>Thể loại:</b> @Html.Raw(Model.Category.CategoryName)</p>
+        <h5 class="title mt-3">@Model.Title</h5>
+        <div class="img_details mt-3">
+            <img data-article_id="@Model.ArticleID"
+                 class=""
+                 src="@Html.DisplayFor(Model => Model.Link)"
+                 alt="">
+        </div>
+        <p class="mt-3">@Html.Raw(Model.Contents)</p>
+    </div>
+
+    <div class="comments mt-5">
+        <h4>Bình luận:</h4>
+        <div class="form_comment">
+            @foreach (var item in Model.Comments)
+            {
+                <div class="form_user_cmt">
+                    <img class="rounded-circle shadow-1-strong me-3"
+                         src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp" alt="avatar" width="65"
+                         height="65" />
+                    <div>
+                        <p class="p_note"><span class="name_comment">@item.User.Fullname</span> - <span class="date_comment">@item.DateComment</span></p>
+                        <p class="p_note mb-2">@item.CmtContent</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="cmt">
+            <button class="btn btn-info clickBtnCmt">Thêm bình luận</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal cmt -->
+<div 
+    class="modal fade"
+    id="modalCmt"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modalLabelCmt"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelCmt">Thêm bình luận</h5>
+                <button type="button" class="btn-close btn-modal-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mt-2">
+                    Tên sử dụng:
+                    <div class="col-md-10">
+                        <input name="UserName" class="modal_user_name style_input" value="">
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    Mật khẩu:
+                    <div class="col-md-10">
+                        <input name="PasswordHash" class="modal_password_hash style_input" value="">
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    Bình luận:
+                    <div class="col-md-10">
+                        <textarea name="CmtContent" class="modal_cmt_content style_input" value=""></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-modal-close" data-coreui-dismiss="modal">Đóng</button>
+                <button 
+                    type="button" 
+                    class="btn btn-primary btn-modal-cmt"
+                    data-article_id="@Model.ArticleID" 
+                >
+                    Bình luận
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- script -->
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // info modal
+            var modalCmt = new bootstrap.Modal(document.getElementById("modalCmt"), {});
+
+            // btn close modal
+            $(document).on("click", ".btn-modal-close", function () {
+                modalCmt.hide();
+            });
+
+            // function cmt user
+            $(document).on("click", ".clickBtnCmt", function () {
+                modalCmt.show();
+            });
+
+            // function push cmt
+            $(document).on("click", ".btn-modal-cmt", function () {
+                let data = $(this).data();
+
+                // get data input
+                let UserName = $(".modal_user_name").val();
+                let PasswordHash = $(".modal_password_hash").val();
+                let CmtContent = $(".modal_cmt_content").val();
+
+                // check validate
+                if (UserName == "") {
+                    return alert("Vui lòng thêm tên sử dụng!");
+                }
+                if (PasswordHash == "") {
+                    return alert("Vui lòng thêm mật khẩu!");
+                }
+                if (CmtContent == "") {
+                    return alert("Vui lòng thêm bình luận!");
+                }
+
+                // call ajax
+                $.ajax({
+                    url: '@Url.Action("PostCmt", "DetailArticle")',
+                    type: 'POST',
+                    data: {
+                        ArticleID   : Number(data.article_id),
+                        UserName    : UserName,
+                        PasswordHash: PasswordHash,
+                        CmtContent  : CmtContent,
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            alert("Thêm bình luận thành công!");
+                            location.reload();
+                        } else {
+                            if (response.data == 0) {
+                                alert("Thông tin người dùng không chính xác. Vui lòng kiểm tra lại!");
+                            } else {
+                                alert("Thêm bình luận thất bại!");
+                            }
+                        }
+                    },
+                    error: function () {
+                        alert("Đã xảy ra lỗi khi thêm bình luận");
+                    }
+                });
+            });
+        });
+    </script>
+}

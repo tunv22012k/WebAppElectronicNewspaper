@@ -1,13 +1,85 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization;
+
+<!DOCTYPE html>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/bootstrap.css")
+    @Styles.Render("~/Css/Home.css")
 </head>
 <body>
+    <header>
+        <!-- header-top -->
+        <div class="header-top">
+            <div class="logo">
+                <img src="https://cdnweb.dantri.com.vn/dist/static-logo.1-0-1.742f36bc45f3443d0e59.svg" alt="Alternate Text" />
+            </div>
+
+            <div class="onboarding">
+                
+            </div>
+
+            <div class="search">
+                @*<i class="fas fa-right-to-bracket"></i>
+                <button>Đăng nhập</button>
+                <i class="fas fa-search"></i>*@
+            </div>
+        </div>
+
+        <!-- card -->
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="true" href="@Url.RouteUrl("Default", new { controller = "Home", action = "Index" })"><i class="fas fa-house"></i> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-current="true" href="#">TIN MỚI NHẤT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">VIDEO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">KINH DOANH</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">XÃ HỘI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">THẾ GIỚI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">GIẢI TRÍ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+            
     <div>
         @RenderBody()
     </div>
+
+    <footer>
+        <div class="footer">
+
+        </div>
+    </footer>
+
+    <!-- File default -->
+    @Scripts.Render("~/Scripts/jquery-3.4.1.min.js")
+    @Scripts.Render("~/Scripts/jquery-3.4.1.js")
+    @Scripts.Render("~/Scripts/jquery.validate.min.js")
+    @Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.bundle.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.js")
+
+    @RenderSection("scripts", required: false)
 </body>
 </html>
