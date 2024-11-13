@@ -189,3 +189,7 @@
     width: 100%;
     border-radius: 5px;
 }
+
+.inactive {
+    color: rgba(33, 37, 41, 0.75) !important;
+}

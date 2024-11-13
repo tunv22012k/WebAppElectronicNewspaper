@@ -3249,6 +3249,9 @@
     <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Category\EditCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Category\DeleteCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Delete.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3281,6 +3284,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ListCategory.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Category.cs" />
@@ -3605,6 +3609,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Views\DetailArticle\Index.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

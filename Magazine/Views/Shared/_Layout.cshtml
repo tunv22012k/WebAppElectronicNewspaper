@@ -12,6 +12,9 @@
     @Styles.Render("~/Content/bootstrap.min.css")
     @Styles.Render("~/Content/bootstrap.css")
     @Styles.Render("~/Css/Home.css")
+    @{
+        var ListCategory = Magazine.Helpers.ListCategory.GetListCategory();
+    }
 </head>
 <body>
     <header>
@@ -37,26 +40,14 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="true" href="@Url.RouteUrl("Default", new { controller = "Home", action = "Index" })"><i class="fas fa-house"></i> </a>
+                        <a class="nav-link @(ViewBag.CategoryID == null ? "active" : "inactive")" aria-current="true" href="@Url.RouteUrl("Default", new { controller = "Home", action = "Index" })"><i class="fas fa-house"></i> </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-current="true" href="#">TIN MỚI NHẤT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">VIDEO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">KINH DOANH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">XÃ HỘI</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">THẾ GIỚI</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">GIẢI TRÍ</a>
-                    </li>
+                    @foreach (var item in ListCategory)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.CategoryID == item.CategoryID ? "active" : "inactive")" aria-current="true" href="@Url.RouteUrl("Default", new { controller = "Home", action = "Category", CategoryId = item.CategoryID })">@item.CategoryName</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

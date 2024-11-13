@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Magazine.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- new-category -->
+<div class="container news-category">
+    <div class="news">
+        @foreach (var item in Model)
+        {
+            <div class="news-detail">
+                <img 
+                     data-article_id="@item.ArticleID" 
+                     class="clickDetails" 
+                     src="@Html.DisplayFor(modelItem => item.Link)" 
+                     alt=""
+                >
+                <div class="news-des">
+                    <h5 
+                        data-article_id="@item.ArticleID" 
+                        class="clickDetails"
+                    >
+                        @Html.Raw(item.Title)
+                    </h5>
+                    <p>@Html.Raw(item.Contents)</p>
+                    <p>Thể loại: @Html.Raw(item.Category.CategoryName)</p>
+                    <p>@(item.PostTime)</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<!-- script -->
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on("click", ".clickDetails", function () {
+                let data = $(this).data();
+
+                // Generate the base URL with Razor
+                let url = '@Url.RouteUrl("Default", new { controller = "DetailArticle", action = "Index" })';
+
+                // Navigate to the constructed URL
+                location.href = url += "?ArticleID=" + data.article_id;
+            });
+        });
+    </script>
+}

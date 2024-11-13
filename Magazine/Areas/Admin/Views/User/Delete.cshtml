@@ -10,19 +10,19 @@
 <div>
     <hr />
     <dl class="dl-horizontal">
-        <dt>Username</dt>
+        <dt>Tên người dùng:</dt>
         <dd>@Html.DisplayFor(model => model.Username)</dd>
 
-        <dt>Email</dt>
+        <dt>Email:</dt>
         <dd>@Model.Email</dd>
 
 </dl>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-<div class="form-group">
-    <input type="submit" value="Xóa" class="btn btn-danger" /> | @Html.ActionLink("Trở về", "Index", "", new { @class = "btn btn-outline-dark" })
-</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <input type="submit" value="Xóa" class="btn btn-danger" /> | @Html.ActionLink("Trở về", "Index", "", new { @class = "btn btn-outline-dark" })
+    </div>
 }
 </div>

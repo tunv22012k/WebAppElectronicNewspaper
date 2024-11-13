@@ -12,16 +12,18 @@ namespace Magazine.Models
         [Key]
         public int ArticleID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Không thể để trống tiêu đề")]
         [MaxLength]
         public string Title { get; set; }
 
+        [Required(ErrorMessage = "Không thể để trống nội dung")]
         public string Contents { get; set; }
 
         public DateTime PostTime { get; set; } = DateTime.Now;
 
         public string ArticleImage { get; set; }
 
+        [Required(ErrorMessage = "Không thể để trống link hình ảnh")]
         [MaxLength(256)]
         public string Link { get; set; }
 
